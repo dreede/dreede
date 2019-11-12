@@ -1,0 +1,34 @@
+package MedicalDB;
+
+import java.util.Scanner;
+
+import MedicalDB.Patient;
+import MedicalDB.PatientDB;
+
+public class NursePrt {
+
+	 public static void main(String[] args) { 
+		 Scanner sc = new Scanner(System.in); 
+		 String input; 
+		 int patient_no; 
+		 do { System.out.println("Welcome to the Patient Viewer"); 
+		 System.out.print("Enter the a Patient Number: "); 
+		 patient_no = sc.nextInt(); 
+		 PatientDB pat = new PatientDB(); 
+		 Patient c; c = pat.getPatient(patient_no); 
+		if(c!=null) { 
+		 System.out.println(c.getName()); 
+		 System.out.println(c.getAddress()); 
+		 System.out.print(c.getCity()); 
+		 System.out.print(","+c.getState()); 
+		 System.out.print(" "+c.getPostalCode()); 
+		 System.out.println();
+		 } 
+		 else 
+		 System.out.println("There is no customer number " + patient_no + " in our records."); 
+		 System.out.print("Display another customer? (y/n) : "); 
+		 input = sc.next();
+		 } while(input.equals("Y") || input.equals("y"));
+		 }
+}
+
