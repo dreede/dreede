@@ -1,0 +1,22 @@
+package MedicalDB;
+
+
+public class PatientDB {
+
+	public Patient getPatient1(int value) { 
+		 if (value == 1) { 
+		 return new Patient(1, "Barbara White", "3400 Richmond Parkway #3423", "Bristol", "CT", "06010"); 
+		 } else 
+		 if (value == 2) { return new Patient(2, "Karl Vang", "327 Franklin Street", "Edina", "MN", "55435"); 
+		 } else 
+		 if (value == 3) { return new Patient(3, "Ronda Chavan", "518 Commanche Dr.", "Greensboro", "NC", "27410"); 
+		 } else 
+		 { return null; 
+		 } 
+		 }
+
+		public Patient getPatient(int patient_no) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+}
