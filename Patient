@@ -1,58 +1,109 @@
 package MedicalDB;
 
+import MedicalDB.PatientDB;
+
 public class Patient {
-	private int patientNum; 
-	 private String name; 
-	 private String address; 
-	 private String city; 
-	 private String state; 
-	 private String postalCode; 
-	 public Patient(int PatientNum, String name, String address, String city, String state, String postalCode) { 
-super();  
-this.patientNum = patientNum; 
-this.name = name; 
-this.address = address; 
-this.city = city; 
-this.state = state; 
-this.postalCode = postalCode; 
-} 
-public int getPatientNum() { 
-return patientNum; 
-} 
-public void setPatientNum(int patientNum) { 
-this.patientNum = patientNum; 
-} 
-public String getName() { 
-return name; 
-} 
-public void setName(String name) { 
-this.name = name; 
-} 
-public String getAddress() { 
-return address; 
-} 
-public void setAddress(String address) { 
-this.address = address; 
-} 
-public String getCity() { 
-return city; 
-} 
-public void setCity(String city) { 
-this.city = city; 
-} 
-public String getState() { 
-return state; 
-} 
-public void setState(String state) { 
-this.state = state; 
-} 
-public String getPostalCode() { 
-return postalCode; 
-} 
-public void setPostalCode(String postalCode) { 
-this.postalCode = postalCode; 
-} 
-public String getNameAndAddress() { 
-return getName() + " " + getAddress(); 
-} 
+	private int patientNum;
+	private String name;
+	private String address;
+	private String city;
+	private String state;
+	private String postalCode;
+	private String age;
+	private String height;
+	private String weight;
+	private String BMI;
+
+	public Patient(int PatientNum, String name, String address, String city, String state, String postalCode, String age, String height, String weight, String BMI) {
+		super();
+		this.patientNum = patientNum;
+		this.name = name;
+		this.address = address;
+		this.city = city;
+		this.state = state;
+		this.postalCode = postalCode;
+		this.age = age;
+		this.height = height;
+		this.weight = weight;
+		this.BMI = BMI;
+	}
+
+	public int getPatientNum() {
+		return patientNum;
+	}
+
+	public void setPatientNum(int patientNum) {
+		this.patientNum = patientNum;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getPostalCode() {
+		return postalCode;
+	}
+
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
+	}
+
+	public String getNameAndAddress() {
+		return getName() + " " + getAddress();
+	}
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
+	}
+	public String getHeight() {
+		return height;
+	}
+
+	public void setHeight(String height) {
+		this.height = height;
+	}
+	public String getWeight() {
+		return weight;
+	}
+
+	public void setWeight(String weight) {
+		this.weight = weight;
+	}
+	public String getBMI() {
+		return BMI;
+	}
+
+	public void setBMI(String BMI) {
+}
 }
