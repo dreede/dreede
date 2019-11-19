@@ -1,22 +1,16 @@
 package MedicalDB;
+public class PatientDB {//Creating the Database for Patients
 
-
-public class PatientDB {
-
-	public Patient getPatient1(int value) { 
-		 if (value == 1) { 
-		 return new Patient(1, "Barbara White", "3400 Richmond Parkway #3423", "Bristol", "CT", "06010"); 
-		 } else 
-		 if (value == 2) { return new Patient(2, "Karl Vang", "327 Franklin Street", "Edina", "MN", "55435"); 
-		 } else 
-		 if (value == 3) { return new Patient(3, "Ronda Chavan", "518 Commanche Dr.", "Greensboro", "NC", "27410"); 
-		 } else 
-		 { return null; 
-		 } 
-		 }
-
-		public Patient getPatient(int patient_no) {
-			// TODO Auto-generated method stub
+	public Patient getPatient(int value) {//
+		if (value == 1) {
+			return new Patient(1, "Barbara White", "3400 Richmond Parkway #3423", "Bristol", "CT", "06010", "42", "5'8", "150", "22.8");
+		} else if (value == 2) {
+			return new Patient(2, "Karl Vang", "327 Franklin Street", "Edina", "MN", "55435", "30", "6'0", "180", "24.4");
+		} else if (value == 3) {
+			return new Patient(3, "Ronda Chavan", "518 Commanche Dr.", "Greensboro", "NC", "27410", "18", "5'11", "130", "18.1");
+		} else {
 			return null;
 		}
+	}
+
 }
