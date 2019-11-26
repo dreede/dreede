@@ -1,0 +1,73 @@
+package MedicalDB;
+
+public class ArrayDB {
+
+	public static String[] Array;
+
+	public static void Array(String[] args) {
+
+		String[][][] patientOneArray = new String[9][9][9]; 
+		patientOneArray[0][0][0] = "Barbara White";
+		patientOneArray[0][0][1] = "3400 Richmond Parkway #3423";
+		patientOneArray[0][1][0] = "Bristol";
+		patientOneArray[0][1][1] = "CT";
+		patientOneArray[1][0][0] = "06010";
+		patientOneArray[1][0][1] = "42";
+		patientOneArray[1][1][0] = "5'8";
+		patientOneArray[1][1][1] = "150";
+		
+		System.out.println("");
+		System.out.println("Patient #1");
+		System.out.println("Name: " + patientOneArray[0][0][0]);
+		System.out.println("Address: " + patientOneArray[0][0][1]);
+		System.out.println("City: " + patientOneArray[0][1][0]);
+		System.out.println("State: " + patientOneArray[0][1][1]);
+		System.out.println("PostalCode: " + patientOneArray[1][0][0]);
+		System.out.println("Age: " + patientOneArray[1][0][1]);
+		System.out.println("Height: " + patientOneArray[1][1][0]);
+		System.out.println("Weight: " + patientOneArray[1][1][1]);
+		
+		String[][][] patientTwoArray = new String[9][9][9]; 
+		patientTwoArray[0][0][0] = "Karl Vang";
+		patientTwoArray[0][0][1] = "327 Franklin Street";
+		patientTwoArray[0][1][0] = "Edina";
+		patientTwoArray[0][1][1] = "MN";
+		patientTwoArray[1][0][0] = "55435";
+		patientTwoArray[1][0][1] = "30";
+		patientTwoArray[1][1][0] = "6'0";
+		patientTwoArray[1][1][1] = "180";
+	
+		System.out.println("");
+		System.out.println("Patient #2");
+		System.out.println("Name: " + patientTwoArray[0][0][0]);
+		System.out.println("Address: " + patientTwoArray[0][0][1]);
+		System.out.println("City: " + patientTwoArray[0][1][0]);
+		System.out.println("State: " + patientTwoArray[0][1][1]);
+		System.out.println("PostalCode: " + patientTwoArray[1][0][0]);
+		System.out.println("Age: " + patientTwoArray[1][0][1]);
+		System.out.println("Height: " + patientTwoArray[1][1][0]);
+		System.out.println("Weight: " + patientTwoArray[1][1][1]);
+		
+		String[][][] patientThreeArray = new String[9][9][9]; 
+		patientThreeArray[0][0][0] = "Ronda Chavan";
+		patientThreeArray[0][0][1] = "518 Commanche Dr.";
+		patientThreeArray[0][1][0] = "Greensboro";
+		patientThreeArray[0][1][1] = "NC";
+		patientThreeArray[1][0][0] = "27410";
+		patientThreeArray[1][0][1] = "18";
+		patientThreeArray[1][1][0] = "5'11";
+		patientTwoArray[1][1][1] = "130";
+	
+		System.out.println("");
+		System.out.println("Patient #3");
+		System.out.println("Name: " + patientThreeArray[0][0][0]);
+		System.out.println("Address: " + patientThreeArray[0][0][1]);
+		System.out.println("City: " + patientThreeArray[0][1][0]);
+		System.out.println("State: " + patientThreeArray[0][1][1]);
+		System.out.println("PostalCode: " + patientThreeArray[1][0][0]);
+		System.out.println("Age: " + patientThreeArray[1][0][1]);
+		System.out.println("Height: " + patientThreeArray[1][1][0]);
+		System.out.println("Weight: " + patientThreeArray[1][1][1]);
+
+	}
+}
