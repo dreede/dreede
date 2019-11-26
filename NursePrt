@@ -12,21 +12,22 @@ public class NursePrt extends PatientDB{
 		int begin;
 		String input = null;
 		int patient_no;
+		
+		System.out.println("Welcome to the Patient Viewer");
+		System.out.println("Current date and time is");
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+		LocalDateTime now = LocalDateTime.now();
+		System.out.println(dtf.format(now));
+		System.out.println("1. All Files");
+		System.out.println("2. One Patient's Files");
+		begin = sc.nextInt();
+		if (begin == 1) {
+			ArrayDB.Array(args);
+			ArrayDB Two = new ArrayDB();
+			if (Two != null);
+			System.out.println(Two);
+		} else if (begin == 2) {
 		do {
-			System.out.println("Welcome to the Patient Viewer");
-			System.out.println("Current date and time is");
-			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-			LocalDateTime now = LocalDateTime.now();
-			System.out.println(dtf.format(now));
-			System.out.println("1. All Files");
-			System.out.println("2. One Patient's Files");
-			begin = sc.nextInt();
-			if (begin == 1) {
-				ArrayDB.Array(args);
-				ArrayDB Two = new ArrayDB();
-				if (Two != null);
-				System.out.println(Two);
-			} else if (begin == 2) {
 			System.out.print("Enter the a Patient Number: ");
 			patient_no = sc.nextInt();
 			PatientDB pat = new PatientDB();
@@ -48,8 +49,7 @@ public class NursePrt extends PatientDB{
 				System.out.println("There is no customer number " + patient_no + " in our records.");
 			System.out.print("Display another customer? (y/n) : ");
 			input = sc.next();
-			}
 		} while (input.equals("Y") || input.equals("y"));
 	}
-	
+	}	
 }
