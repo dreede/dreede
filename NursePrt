@@ -5,12 +5,12 @@ import java.time.LocalDateTime;
 
 import MedicalDB.Patient;
 
-public class NursePrt extends PatientDB {
+public class NursePrt extends PatientDB{
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		String begin;
-		String input;
+		int begin;
+		String input = null;
 		int patient_no;
 		do {
 			System.out.println("Welcome to the Patient Viewer");
@@ -19,10 +19,13 @@ public class NursePrt extends PatientDB {
 			LocalDateTime now = LocalDateTime.now();
 			System.out.println(dtf.format(now));
 			System.out.println("1. All Files");
-			System.out.println("2. One Patient");
-			begin = sc.next();
+			System.out.println("2. One Patient's Files");
+			begin = sc.nextInt();
 			if (begin == 1) {
-				
+				ArrayDB.Array(args);
+				ArrayDB Two = new ArrayDB();
+				if (Two != null);
+				System.out.println(Two);
 			} else if (begin == 2) {
 			System.out.print("Enter the a Patient Number: ");
 			patient_no = sc.nextInt();
@@ -30,11 +33,11 @@ public class NursePrt extends PatientDB {
 			Patient c;
 			c = pat.getPatient(patient_no);
 			if (c != null) {
-				System.out.println(c.getName());
-				System.out.println(c.getAddress());
-				System.out.print(c.getCity());
-				System.out.print("," + c.getState());
-				System.out.print(" " + c.getPostalCode());
+				System.out.println("Name: " + c.getName());
+				System.out.println("Address: " + c.getAddress());
+				System.out.println("City: " + c.getCity());
+				System.out.println("State: " + c.getState());
+				System.out.println("Postal Code: " + c.getPostalCode());
 				System.out.println();
 				System.out.println("Age: " + c.getAge());
 				System.out.println("Height: " + c.getHeight());
@@ -48,4 +51,5 @@ public class NursePrt extends PatientDB {
 			}
 		} while (input.equals("Y") || input.equals("y"));
 	}
+	
 }
