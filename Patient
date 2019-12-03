@@ -1,5 +1,4 @@
 package MedicalDB;
-package MedicalDB;
 
 import MedicalDB.PatientDB;
 
@@ -13,9 +12,8 @@ public class Patient {
 	private String age;
 	private String height;
 	private String weight;
-	private String BMI;
 
-	public Patient(int PatientNum, String name, String address, String city, String state, String postalCode, String age, String height, String weight, String BMI) {
+	public Patient(int PatientNum, String name, String address, String city, String state, String postalCode, String age, String height, String weight) {
 		super();
 		this.patientNum = patientNum;
 		this.name = name;
@@ -26,7 +24,6 @@ public class Patient {
 		this.age = age;
 		this.height = height;
 		this.weight = weight;
-		this.BMI = BMI;
 	}
 
 	public int getPatientNum() {
@@ -101,10 +98,4 @@ public class Patient {
 	public void setWeight(String weight) {
 		this.weight = weight;
 	}
-	public String getBMI() {
-		return BMI;
-	}
-
-	public void setBMI(String BMI) {
-}
 }
