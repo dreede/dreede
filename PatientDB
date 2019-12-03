@@ -4,11 +4,11 @@ public class PatientDB {//Creating the Database for Patients
 
 	public Patient getPatient(int value) {//
 		if (value == 1) {
-			return new Patient(1, "Barbara White", "3400 Richmond Parkway #3423", "Bristol", "CT", "06010", "42", "5'8", "150", "22.8");
+			return new Patient(1, "Barbara White", "3400 Richmond Parkway #3423", "Bristol", "CT", "06010", "42", "1.7526", "68.0389");
 		} else if (value == 2) {
-			return new Patient(2, "Karl Vang", "327 Franklin Street", "Edina", "MN", "55435", "30", "6'0", "180", "24.4");
+			return new Patient(2, "Karl Vang", "327 Franklin Street", "Edina", "MN", "55435", "30", "1.8288", "81.6466");
 		} else if (value == 3) {
-			return new Patient(3, "Ronda Chavan", "518 Commanche Dr.", "Greensboro", "NC", "27410", "18", "5'11", "130", "18.1");
+			return new Patient(3, "Ronda Chavan", "518 Commanche Dr.", "Greensboro", "NC", "27410", "18", "1.8031968", "58.967");
 		} else {
 			return null;
 		}
