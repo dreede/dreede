@@ -2,6 +2,7 @@ package MedicalDB;
 import java.util.Scanner;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
+import java.math.*;
 
 import MedicalDB.Patient;
 
@@ -12,6 +13,7 @@ public class NursePrt extends PatientDB{
 		int begin;
 		String input = null;
 		int patient_no;
+		String bmi = null;
 		
 		System.out.println("Welcome to the Patient Viewer");
 		System.out.println("Current date and time is");
@@ -33,6 +35,7 @@ public class NursePrt extends PatientDB{
 			PatientDB pat = new PatientDB();
 			Patient c;
 			c = pat.getPatient(patient_no);
+			
 			if (c != null) {
 				System.out.println("Name: " + c.getName());
 				System.out.println("Address: " + c.getAddress());
@@ -43,11 +46,25 @@ public class NursePrt extends PatientDB{
 				System.out.println("Age: " + c.getAge());
 				System.out.println("Height: " + c.getHeight());
 				System.out.println("Weight: " + c.getWeight());
-				System.out.println("BMI: " + c.getBMI());
 				System.out.println();
+				System.out.println("Do you want the patients BMI? (y/n)");
+				bmi = sc.next();
+				if (bmi.equals("Y") || bmi.equals("y"));{
+					
+					double a = Double.parseDouble(c.getHeight());
+					double b = Double.parseDouble(c.getWeight());
+					BigDecimal d;
+					d = BigDecimal.valueOf(b);
+					double e = (double) Math.pow(a, 2);
+					BigDecimal f; 
+					f = BigDecimal.valueOf(e);
+					BigDecimal g = d.divide(f, 2, RoundingMode.HALF_UP);
+					
+					System.out.println("BMI: " + g);
+				}
 			} else
 				System.out.println("There is no customer number " + patient_no + " in our records.");
-			System.out.print("Display another customer? (y/n) : ");
+			System.out.print("Display another patient? (y/n) : ");
 			input = sc.next();
 		} while (input.equals("Y") || input.equals("y"));
 	}
