@@ -6,6 +6,7 @@ public class ArrayDB {
 
 	public static void Array(String[] args) {
 
+//Patient 1's Data In An Array
 		String[][][] patientOneArray = new String[9][9][9]; 
 		patientOneArray[0][0][0] = "Barbara White";
 		patientOneArray[0][0][1] = "3400 Richmond Parkway #3423";
@@ -13,9 +14,10 @@ public class ArrayDB {
 		patientOneArray[0][1][1] = "CT";
 		patientOneArray[1][0][0] = "06010";
 		patientOneArray[1][0][1] = "42";
-		patientOneArray[1][1][0] = "5'8";
-		patientOneArray[1][1][1] = "150";
+		patientOneArray[1][1][0] = "1.7526";
+		patientOneArray[1][1][1] = "68.0389";
 		
+//Prints Patient 1's Data
 		System.out.println("");
 		System.out.println("Patient #1");
 		System.out.println("Name: " + patientOneArray[0][0][0]);
@@ -24,10 +26,11 @@ public class ArrayDB {
 		System.out.println("State: " + patientOneArray[0][1][1]);
 		System.out.println("PostalCode: " + patientOneArray[1][0][0]);
 		System.out.println("Age: " + patientOneArray[1][0][1]);
-		System.out.println("Height: " + patientOneArray[1][1][0]);
-		System.out.println("Weight: " + patientOneArray[1][1][1]);
+		System.out.println("Height in Meters: " + patientOneArray[1][1][0]);
+		System.out.println("Weight in Kilograms: " + patientOneArray[1][1][1]);
 		System.out.println("");
 		
+//Patient 2's Data In An Array
 		String[][][] patientTwoArray = new String[9][9][9]; 
 		patientTwoArray[0][0][0] = "Karl Vang";
 		patientTwoArray[0][0][1] = "327 Franklin Street";
@@ -35,9 +38,10 @@ public class ArrayDB {
 		patientTwoArray[0][1][1] = "MN";
 		patientTwoArray[1][0][0] = "55435";
 		patientTwoArray[1][0][1] = "30";
-		patientTwoArray[1][1][0] = "6'0";
-		patientTwoArray[1][1][1] = "180";
+		patientTwoArray[1][1][0] = "1.8288";
+		patientTwoArray[1][1][1] = "81.6466";
 	
+//Prints Patient 2's Data
 		System.out.println("");
 		System.out.println("Patient #2");
 		System.out.println("Name: " + patientTwoArray[0][0][0]);
@@ -46,10 +50,11 @@ public class ArrayDB {
 		System.out.println("State: " + patientTwoArray[0][1][1]);
 		System.out.println("PostalCode: " + patientTwoArray[1][0][0]);
 		System.out.println("Age: " + patientTwoArray[1][0][1]);
-		System.out.println("Height: " + patientTwoArray[1][1][0]);
-		System.out.println("Weight: " + patientTwoArray[1][1][1]);
+		System.out.println("Height in Meters: " + patientTwoArray[1][1][0]);
+		System.out.println("Weight in Kilograms: " + patientTwoArray[1][1][1]);
 		System.out.println("");
 		
+//Patient 3's Data In An Array
 		String[][][] patientThreeArray = new String[9][9][9]; 
 		patientThreeArray[0][0][0] = "Ronda Chavan";
 		patientThreeArray[0][0][1] = "518 Commanche Dr.";
@@ -57,9 +62,10 @@ public class ArrayDB {
 		patientThreeArray[0][1][1] = "NC";
 		patientThreeArray[1][0][0] = "27410";
 		patientThreeArray[1][0][1] = "18";
-		patientThreeArray[1][1][0] = "5'11";
-		patientThreeArray[1][1][1] = "130";
+		patientThreeArray[1][1][0] = "1.8031968";
+		patientThreeArray[1][1][1] = "58.967";
 	
+//Prints Patient 3's Data
 		System.out.println("");
 		System.out.println("Patient #3");
 		System.out.println("Name: " + patientThreeArray[0][0][0]);
@@ -68,9 +74,10 @@ public class ArrayDB {
 		System.out.println("State: " + patientThreeArray[0][1][1]);
 		System.out.println("PostalCode: " + patientThreeArray[1][0][0]);
 		System.out.println("Age: " + patientThreeArray[1][0][1]);
-		System.out.println("Height: " + patientThreeArray[1][1][0]);
-		System.out.println("Weight: " + patientThreeArray[1][1][1]);
+		System.out.println("Height in Meters: " + patientThreeArray[1][1][0]);
+		System.out.println("Weight in Kilograms: " + patientThreeArray[1][1][1]);
 		System.out.println("");
 
 	}
 }
+//Made By Jesse Kelley And Donovan Reede
