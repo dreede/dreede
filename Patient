@@ -1,8 +1,10 @@
 package MedicalDB;
 
+//imports PatientDB from the same project
 import MedicalDB.PatientDB;
 
 public class Patient {
+//makes all the patients information private
 	private int patientNum;
 	private String name;
 	private String address;
@@ -13,8 +15,11 @@ public class Patient {
 	private String height;
 	private String weight;
 
+//calls the information from the PatientDB in this format int, string, string, string, string, string, string, string, string
 	public Patient(int PatientNum, String name, String address, String city, String state, String postalCode, String age, String height, String weight) {
+//super keyword calls the public and protected data of the patients
 		super();
+//this keyword calls a certain object of the invoked method
 		this.patientNum = patientNum;
 		this.name = name;
 		this.address = address;
@@ -26,6 +31,7 @@ public class Patient {
 		this.weight = weight;
 	}
 
+//gets the patientNum object and sets it to be returned the NursePrt class
 	public int getPatientNum() {
 		return patientNum;
 	}
@@ -34,6 +40,7 @@ public class Patient {
 		this.patientNum = patientNum;
 	}
 
+//gets the name object and sets it to be returned the NursePrt class
 	public String getName() {
 		return name;
 	}
@@ -42,6 +49,7 @@ public class Patient {
 		this.name = name;
 	}
 
+//gets the address object and sets it to be returned the NursePrt class
 	public String getAddress() {
 		return address;
 	}
@@ -50,6 +58,7 @@ public class Patient {
 		this.address = address;
 	}
 
+//gets the city object and sets it to be returned the NursePrt class
 	public String getCity() {
 		return city;
 	}
@@ -58,6 +67,7 @@ public class Patient {
 		this.city = city;
 	}
 
+//gets the state object and sets it to be returned the NursePrt class
 	public String getState() {
 		return state;
 	}
@@ -66,6 +76,7 @@ public class Patient {
 		this.state = state;
 	}
 
+//gets the postalCode object and sets it to be returned the NursePrt class
 	public String getPostalCode() {
 		return postalCode;
 	}
@@ -74,9 +85,12 @@ public class Patient {
 		this.postalCode = postalCode;
 	}
 
+//gets the name and the address objects and sets them together to be returned the NursePrt class
 	public String getNameAndAddress() {
 		return getName() + " " + getAddress();
 	}
+
+//gets the age object and sets it to be returned the NursePrt class
 	public String getAge() {
 		return age;
 	}
@@ -84,6 +98,8 @@ public class Patient {
 	public void setAge(String age) {
 		this.age = age;
 	}
+	
+//gets the height object and sets it to be returned the NursePrt class
 	public String getHeight() {
 		return height;
 	}
@@ -91,6 +107,8 @@ public class Patient {
 	public void setHeight(String height) {
 		this.height = height;
 	}
+
+//gets the weight object and sets it to be returned the NursePrt class
 	public String getWeight() {
 		return weight;
 	}
@@ -99,3 +117,4 @@ public class Patient {
 		this.weight = weight;
 	}
 }
+//Made By Jesse Kelley And Donovan Reede
