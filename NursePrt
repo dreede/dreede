@@ -1,41 +1,68 @@
 package MedicalDB;
+
+//Imports scanner into the class
 import java.util.Scanner;
+//imports date and time formatter into the class
 import java.time.format.DateTimeFormatter;
+//imports date and time into the class
 import java.time.LocalDateTime;
+//imports all math functions
 import java.math.*;
 
+//imports the patient class form the same project
 import MedicalDB.Patient;
 
+//extends the NursePrt class to the PatientDB class
 public class NursePrt extends PatientDB{
 
 	public static void main(String[] args) {
+//imports the scanner function
 		Scanner sc = new Scanner(System.in);
+//Variables for the scanner function
 		int begin;
 		String input = null;
 		int patient_no;
 		String bmi = null;
 		
+//prints the welcome info
 		System.out.println("Welcome to the Patient Viewer");
 		System.out.println("Current date and time is");
+//imports the date and time formatter function
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+//imports the current date and time
 		LocalDateTime now = LocalDateTime.now();
+//imports the date and time into the formatter and then prints it
 		System.out.println(dtf.format(now));
+//prints two options to pick from
 		System.out.println("1. All Files");
 		System.out.println("2. One Patient's Files");
+//calls new scanner function called begin that asks for a 1 or a 2
 		begin = sc.nextInt();
+//if statement that runs function 1 of 2
 		if (begin == 1) {
+//calls Array method from the ArrayDB class
 			ArrayDB.Array(args);
+//renames ArrayDB to Two
 			ArrayDB Two = new ArrayDB();
+//another if statement to print the patient database
 			if (Two != null);
 			System.out.println(Two);
+//else if statement that runs function 2 of 2
 		} else if (begin == 2) {
+//do while statement that prints one patient at a time
 		do {
+//prints a line that asks for the patient's number
 			System.out.print("Enter the a Patient Number: ");
+//calls new scanner function called patient_no
 			patient_no = sc.nextInt();
+//renames the PatientDB class to pat
 			PatientDB pat = new PatientDB();
+//renames the Patient class to c
 			Patient c;
+//calls Patient class to draw information from the PatientDB class
 			c = pat.getPatient(patient_no);
 			
+//if else statement prints the information from the PatientDB class if it is a valid patient number
 			if (c != null) {
 				System.out.println("Name: " + c.getName());
 				System.out.println("Address: " + c.getAddress());
@@ -44,29 +71,42 @@ public class NursePrt extends PatientDB{
 				System.out.println("Postal Code: " + c.getPostalCode());
 				System.out.println();
 				System.out.println("Age: " + c.getAge());
-				System.out.println("Height: " + c.getHeight());
-				System.out.println("Weight: " + c.getWeight());
+				System.out.println("Height in Meters: " + c.getHeight());
+				System.out.println("Weight in Kilograms: " + c.getWeight());
 				System.out.println();
 				System.out.println("Do you want the patients BMI? (y/n)");
+//calls new scanner function called bmi that asks for a y or n
 				bmi = sc.next();
+				
+//if statement that pulls info from PatientDB and runs a math class function to get the patients BMI
 				if (bmi.equals("Y") || bmi.equals("y"));{
-					
+//changes the string height from the PatientDB to a double
 					double a = Double.parseDouble(c.getHeight());
+//changes the string weight from the PatientDB to a double
 					double b = Double.parseDouble(c.getWeight());
+//turns double b into a math class function call BigDecimal d
 					BigDecimal d;
 					d = BigDecimal.valueOf(b);
+//takes double a and applies an exponent of 2 to it and renames it to e
 					double e = (double) Math.pow(a, 2);
+//turns double e into a math class function call BigDecimal f
 					BigDecimal f; 
 					f = BigDecimal.valueOf(e);
+//runs the divide math class function to divide weight(d) by height squared(f) and told it to round up to 2 decimals
 					BigDecimal g = d.divide(f, 2, RoundingMode.HALF_UP);
-					
+//prints g which is the BMI of the patient
 					System.out.println("BMI: " + g);
 				}
+//else statement that prints a line stating that there is no patient with that number in our records
 			} else
-				System.out.println("There is no customer number " + patient_no + " in our records.");
-			System.out.print("Display another patient? (y/n) : ");
-			input = sc.next();
+				System.out.println("There is no patient number " + patient_no + " in our records.");
+//prints a line asking if you want to display another patient
+				System.out.print("Display another patient? (y/n) : ");
+//calls new scanner function called input that asks for a y or n
+				input = sc.next();
+//while loop that will either end the method or call another patient
 		} while (input.equals("Y") || input.equals("y"));
 	}
 	}	
 }
+//Made By Jesse Kelley And Donovan Reede
