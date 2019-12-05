@@ -1,8 +1,11 @@
 package MedicalDB;
 
-public class PatientDB {//Creating the Database for Patients
+//Creating the Database for Patients
+public class PatientDB {
 
-	public Patient getPatient(int value) {//
+//reads the int value and returns the patients data to the Patient class
+	public Patient getPatient(int value) {
+//if statement that reads the int value of the patient
 		if (value == 1) {
 			return new Patient(1, "Barbara White", "3400 Richmond Parkway #3423", "Bristol", "CT", "06010", "42", "1.7526", "68.0389");
 		} else if (value == 2) {
@@ -10,8 +13,10 @@ public class PatientDB {//Creating the Database for Patients
 		} else if (value == 3) {
 			return new Patient(3, "Ronda Chavan", "518 Commanche Dr.", "Greensboro", "NC", "27410", "18", "1.8031968", "58.967");
 		} else {
+//if there is no matching int value it returns a null value
 			return null;
 		}
 	}
 
 }
+//Made By Jesse Kelley And Donovan Reede
